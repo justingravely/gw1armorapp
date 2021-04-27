@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+}
+/* main menu */
+#mainMenu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+}
+
+.professionsWrapper {
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+}
+
+.professionDiv {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 8rem;
+  margin: auto;
+}
+
+.professionDivInner {
+  display: flex;
+  margin: auto;
+  height: 1.5rem;
+  cursor: pointer;
+} 
+
+.professionDivInner img {
+  margin: auto;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.professionDivInner p {
+  margin: auto;
+  margin-left: 0.33rem;
+}
+
+
+/* main */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: white
+}
+
+.topWrap {
+  display: flex;
+  height: 3rem;
+}
+
+.topWrap p {
+  font-size: 1.2rem;
+  margin: auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.575);
+}
+
+.topWrap p:first-child {
+  padding-top: 0.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 4rem;
+  margin-left: 1rem;
+}
+
+.topWrap p:nth-child(2) {
+  border: 0px;
+  font-size: 2rem;
+}
+
+.topWrap p:last-child {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 4rem;
+  margin-right: 1rem;
+}
+
+#male{
+  color: black;
+}
+#female{
+  color: grey;
+}
+
+.armor {
+  margin: auto;
+  margin-top: 0rem;
+  background-image: url("https://wiki.guildwars.com/images/thumb/9/9d/Dervish_Istani_armor_m.jpg/233px-Dervish_Istani_armor_m.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(77, 77, 77, 0.171);
+}
+
+.arrowWrapper {
+  display: flex;
+  font-size: 4rem;
+  margin: auto;
+}
+
+.arrowLeft {
+  margin: auto;
+  margin-right: 1rem;
+}
+
+.arrowLeft i, .arrowRight i {
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.arrowRight {
+  margin: auto;
+  margin-left: 1rem;
+}

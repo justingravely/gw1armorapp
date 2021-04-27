@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/27a12b435e.js" crossorigin="anonymous"></script>
+  <title>gw1</title>
+</head>
+
+<body>
+
+  <div id="mainMenu" class="mainMenu">
+    <div class="professionsWrapper">
+      <div id="warrior" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/3/3b/Warrior-tango-icon-20.png" alt="">
+          <p>Warrior</p>
+        </div>
+      </div>
+      <div id="ranger" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/d/dc/Ranger-tango-icon-20.png" alt="">
+          <p>Ranger</p>
+        </div>
+      </div>
+      <div id="monk" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/f/f8/Monk-tango-icon-20.png" alt="">
+          <p>Monk</p>
+        </div>
+      </div>
+      <div id="necromancer" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/7/7b/Necromancer-tango-icon-20.png" alt="">
+          <p>Necromancer</p>
+        </div>
+      </div>
+      <div id="mesmer" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/f/fb/Mesmer-tango-icon-20.png" alt="">
+          <p>Mesmer</p>
+        </div>
+      </div>
+      <div id="elementalist" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/a/ab/Elementalist-tango-icon-20.png" alt="">
+          <p>Elementalist</p>
+        </div>
+      </div>
+      <div id="assassin" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/5/5f/Assassin-tango-icon-20.png" alt="">
+          <p>Assassin</p>
+        </div>
+      </div>
+      <div id="ritualist" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/8/81/Ritualist-tango-icon-20.png" alt="">
+          <p>Ritualist</p>
+        </div>
+      </div>
+      <div id="paragon" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/5/55/Paragon-tango-icon-20.png" alt="">
+          <p>Paragon</p>
+        </div>
+      </div>
+      <div id="dervish" class="professionDiv">
+        <div class="professionDivInner">
+          <img src="https://wiki.guildwars.com/images/3/3e/Dervish-tango-icon-20.png" alt="">
+          <p>Dervish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="topWrap">
+      <p id="backButton" class="professions">
+        <i class="fas fa-backward"></i>
+      </p>
+      <p id="name" class="name">Istani</p>
+      <p id="sex" class="sex">
+        <i id="male" class="fas fa-mars"></i>
+        <i id="female" class="fas fa-venus"></i>
+      </p>
+    </div>
+
+    <div id="armor" class="armor"></div>
+
+    <div class="arrowWrapper">
+      <div id="left" class="arrowLeft">
+        <i class="fas fa-arrow-circle-left"></i>
+      </div>
+      <div id="right" class="arrowRight">
+        <i class="fas fa-arrow-circle-right"></i>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    var mainMenu = document.getElementById("mainMenu");
+    var backButton = document.getElementById("backButton");
+
+    backButton.addEventListener("click", e => {
+      mainMenu.style.display = "flex";
+      currentName = 0;
+      currentNameEnd = false;
+    })
+
+    var warrior = document.getElementById("warrior");
+    var ranger = document.getElementById("ranger");
+    var monk = document.getElementById("monk");
+    var necromancer = document.getElementById("necromancer");
+    var mesmer = document.getElementById("mesmer");
+    var elementalist = document.getElementById("elementalist");
+    var assassin = document.getElementById("assassin");
+    var ritualist = document.getElementById("ritualist");
+    var paragon = document.getElementById("paragon");
+    var dervish = document.getElementById("dervish");
+
+    warrior.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "warrior";
+      checker();
+    })
+    ranger.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "ranger";
+      checker();
+    })
+    monk.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "monk";
+      checker();
+    })
+    necromancer.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "necromancer";
+      checker();
+    })
+    mesmer.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "mesmer";
+      checker();
+    })
+    elementalist.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "elementalist";
+      checker();
+    })
+    assassin.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "assassin";
+      checker();
+    })
+    ritualist.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "ritualist";
+      checker();
+    })
+    paragon.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "paragon";
+      checker();
+    })
+    dervish.addEventListener("click", e => {
+      mainMenu.style.display = "none";
+      currentProfession = "dervish";
+      checker();
+    })
+
+    var armorName = document.getElementById("name");
+
+    var sex = document.getElementById("sex")
+    var male = document.getElementById("male");
+    male.style.color = "black";
+    var female = document.getElementById("female");
+
+    var armor = document.getElementById("armor");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+
+    var currentProfession = "dervish";
+    var currentSex = "male";
+    var currentName = 0;
+    var currentNameEnd = false;
+    var clickDisable = false;
+
+    sex.addEventListener("click", e => {
+      if (clickDisable == false) {
+        clickDisable = true;
+        if (male.style.color == "black") {
+          male.style.color = "grey";
+          female.style.color = "black";
+          currentSex = "female";
+        } else {
+          male.style.color = "black";
+          female.style.color = "grey";
+          currentSex = "male";
+        }
+        checker();
+        setTimeout(x => {
+          clickDisable = false;
+        }, 100)
+      }
+    })
+
+    left.addEventListener("click", e => {
+      if (!currentName == 0 && clickDisable == false) {
+        clickDisable = true;
+        currentName -= 1;
+        setTimeout(x => {
+          clickDisable = false;
+        }, 100)
+        checker();
+      }
+    })
+    right.addEventListener("click", e => {
+      if (currentNameEnd == false && clickDisable == false) {
+        clickDisable = true;
+        currentName += 1;
+        setTimeout(x => {
+          clickDisable = false;
+        }, 100)
+        checker();
+      }
+    })
+
+
+
+
+    function checker() {
+      console.log(currentName);
+      switch (currentProfession) {
+        case "dervish":
+          switch (currentName) {
+            case 0:
+              armorName.innerHTML = "Istani"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/9d/Dervish_Istani_armor_m.jpg/233px-Dervish_Istani_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/8/88/Dervish_Istani_armor_f.jpg/233px-Dervish_Istani_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 1:
+              armorName.innerHTML = "Sunspear"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/d5/Dervish_Sunspear_armor_m.jpg/233px-Dervish_Sunspear_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/49/Dervish_Sunspear_armor_f.jpg/233px-Dervish_Sunspear_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 2:
+              armorName.innerHTML = "Elonian"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/dd/Dervish_Elonian_armor_m.jpg/233px-Dervish_Elonian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/1/19/Dervish_Elonian_armor_f.jpg/233px-Dervish_Elonian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 3:
+              armorName.innerHTML = "Elite Sunspear"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/07/Dervish_Elite_Sunspear_armor_m.jpg/233px-Dervish_Elite_Sunspear_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/c/c6/Dervish_Elite_Sunspear_armor_f.jpg/233px-Dervish_Elite_Sunspear_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 4:
+              armorName.innerHTML = "Vabbian"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/9d/Dervish_Vabbian_armor_m.jpg/233px-Dervish_Vabbian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/1/14/Dervish_Vabbian_armor_f.jpg/233px-Dervish_Vabbian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 5:
+              armorName.innerHTML = "Ancient"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/aa/Dervish_Ancient_armor_m.jpg/233px-Dervish_Ancient_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/02/Dervish_Ancient_armor_f.jpg/233px-Dervish_Ancient_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 6:
+              armorName.innerHTML = "Primeval"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/09/Dervish_Primeval_armor_m.jpg/233px-Dervish_Primeval_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/8/8c/Dervish_Primeval_armor_f.jpg/233px-Dervish_Primeval_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 7:
+              armorName.innerHTML = "Norn"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/b4/Dervish_Norn_armor_m.jpg/237px-Dervish_Norn_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/8/89/Dervish_Norn_armor_f.jpg/233px-Dervish_Norn_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 8:
+              armorName.innerHTML = "Asuran"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/0/08/Dervish_Asuran_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/97/Dervish_Asuran_armor_f.jpg/230px-Dervish_Asuran_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 9:
+              armorName.innerHTML = "Monument"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/8/88/Dervish_Monument_armor_m.jpg/236px-Dervish_Monument_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/bb/Dervish_Monument_armor_f.jpg/235px-Dervish_Monument_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 10:
+              armorName.innerHTML = "Deldrimor"
+              currentNameEnd = false;
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/1/12/Dervish_Deldrimor_armor_m.jpg/233px-Dervish_Deldrimor_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/3/3f/Dervish_Deldrimor_armor_f.jpg/233px-Dervish_Deldrimor_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 11:
+              armorName.innerHTML = "Obsidian"
+              currentNameEnd = true;
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/e/ea/Dervish_Obsidian_armor_m.jpg/233px-Dervish_Obsidian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/dc/Dervish_Obsidian_armor_f.jpg/233px-Dervish_Obsidian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+          }
+          break;
+        case "warrior":
+          switch (currentName) {
+            case 0:
+              armorName.innerHTML = "Ascalon"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/3/3c/Warrior_Ascalon_armor_m.jpg/283px-Warrior_Ascalon_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/3/32/Warrior_Ascalon_armor_f.jpg/233px-Warrior_Ascalon_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 1:
+              armorName.innerHTML = "Krytan"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/db/Warrior_Krytan_armor_m.jpg/283px-Warrior_Krytan_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/b4/Warrior_Krytan_armor_f.jpg/233px-Warrior_Krytan_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 2:
+              armorName.innerHTML = "Tyrian"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/b5/Warrior_Tyrian_armor_m.jpg/283px-Warrior_Tyrian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/ae/Warrior_Tyrian_armor_f.jpg/233px-Warrior_Tyrian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 3:
+              armorName.innerHTML = "Charr Hide"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/9a/Warrior_Charr_Hide_armor_m.jpg/283px-Warrior_Charr_Hide_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/07/Warrior_Charr_Hide_armor_f.jpg/233px-Warrior_Charr_Hide_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 4:
+              armorName.innerHTML = "Gladiator"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/1/15/Warrior_Gladiator_armor_m.jpg/283px-Warrior_Gladiator_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/5/5b/Warrior_Gladiator_armor_f.jpg/233px-Warrior_Gladiator_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 5:
+              armorName.innerHTML = "Wyvern"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/5/51/Warrior_Wyvern_armor_m.jpg/283px-Warrior_Wyvern_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/08/Warrior_Wyvern_armor_f.jpg/233px-Warrior_Wyvern_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 6:
+              armorName.innerHTML = "Platemail"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/ac/Warrior_Platemail_armor_m.jpg/283px-Warrior_Platemail_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/3/34/Warrior_Platemail_armor_f.jpg/233px-Warrior_Platemail_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 7:
+              armorName.innerHTML = "Templar"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/4c/Warrior_Templar_armor_m.jpg/283px-Warrior_Templar_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/06/Warrior_Templar_armor_f.jpg/233px-Warrior_Templar_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 8:
+              armorName.innerHTML = "Elite Charr Hide"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/f/f2/Warrior_Elite_Charr_Hide_armor_m.jpg/283px-Warrior_Elite_Charr_Hide_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/f/fd/Warrior_Elite_Charr_Hide_armor_f.jpg/233px-Warrior_Elite_Charr_Hide_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 9:
+              armorName.innerHTML = "Elite Gladiator"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/6/67/Warrior_Elite_Gladiator_armor_m.jpg/283px-Warrior_Elite_Gladiator_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/97/Warrior_Elite_Gladiator_armor_f.jpg/233px-Warrior_Elite_Gladiator_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 10:
+              armorName.innerHTML = "Elite Dragon"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/a3/Warrior_Elite_Dragon_armor_m.jpg/283px-Warrior_Elite_Dragon_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/6/6c/Warrior_Elite_Dragon_armor_f.jpg/233px-Warrior_Elite_Dragon_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 11:
+              armorName.innerHTML = "Elite Platemail"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/3/38/Warrior_Elite_Platemail_armor_m.jpg/283px-Warrior_Elite_Platemail_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/e/e0/Warrior_Elite_Platemail_armor_f.jpg/233px-Warrior_Elite_Platemail_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 12:
+              armorName.innerHTML = "Elite Templar"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/4c/Warrior_Elite_Templar_armor_m.jpg/283px-Warrior_Elite_Templar_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/a3/Warrior_Elite_Templar_armor_f.jpg/231px-Warrior_Elite_Templar_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 13:
+              armorName.innerHTML = "Shing Jea"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/6/63/Warrior_Shing_Jea_armor_m.jpg/283px-Warrior_Shing_Jea_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/07/Warrior_Shing_Jea_armor_f.jpg/233px-Warrior_Shing_Jea_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 14:
+              armorName.innerHTML = "Canthan"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/45/Warrior_Canthan_armor_m.jpg/283px-Warrior_Canthan_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/e/e5/Warrior_Canthan_armor_f.jpg/233px-Warrior_Canthan_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 15:
+              armorName.innerHTML = "Kurzick"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/7/7d/Warrior_Kurzick_armor_m.jpg/283px-Warrior_Kurzick_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/7/7c/Warrior_Kurzick_armor_f.jpg/233px-Warrior_Kurzick_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 16:
+              armorName.innerHTML = "Luxon"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/b7/Warrior_Luxon_armor_m.jpg/283px-Warrior_Luxon_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/de/Warrior_Luxon_armor_f.jpg/233px-Warrior_Luxon_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 17:
+              armorName.innerHTML = "Elite Canthan"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/6/6d/Warrior_Elite_Canthan_armor_m.jpg/283px-Warrior_Elite_Canthan_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/41/Warrior_Elite_Canthan_armor_f.jpg/233px-Warrior_Elite_Canthan_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 18:
+              armorName.innerHTML = "Elite Kurzick"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/47/Warrior_Elite_Kurzick_armor_m.jpg/283px-Warrior_Elite_Kurzick_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/6/6e/Warrior_Elite_Kurzick_armor_f.jpg/233px-Warrior_Elite_Kurzick_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 19:
+              armorName.innerHTML = "Elite Luxon"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/1/17/Warrior_Elite_Luxon_armor_m.jpg/283px-Warrior_Elite_Luxon_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/5/55/Warrior_Elite_Luxon_armor_f.jpg/233px-Warrior_Elite_Luxon_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 20:
+              armorName.innerHTML = "Istani"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/ad/Warrior_Istani_armor_m.jpg/283px-Warrior_Istani_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/c/c9/Warrior_Istani_armor_f.jpg/233px-Warrior_Istani_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 21:
+              armorName.innerHTML = "Sunspear"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/2/2a/Warrior_Sunspear_armor_m.jpg/283px-Warrior_Sunspear_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/ab/Warrior_Sunspear_armor_f.jpg/233px-Warrior_Sunspear_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 22:
+              armorName.innerHTML = "Elite Sunspear"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/2/25/Warrior_Elite_Sunspear_armor_m.jpg/283px-Warrior_Elite_Sunspear_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/f/ff/Warrior_Elite_Sunspear_armor_f.jpg/233px-Warrior_Elite_Sunspear_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 23:
+              armorName.innerHTML = "Vabbian"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/3/35/Warrior_Vabbian_armor_m.jpg/283px-Warrior_Vabbian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/7/7c/Warrior_Vabbian_armor_f.jpg/233px-Warrior_Vabbian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 24:
+              armorName.innerHTML = "Ancient"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/5/5d/Warrior_Ancient_armor_m.jpg/283px-Warrior_Ancient_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/90/Warrior_Ancient_armor_f.jpg/233px-Warrior_Ancient_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 25:
+              armorName.innerHTML = "Primeval"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/6/67/Warrior_Primeval_armor_m.jpg/283px-Warrior_Primeval_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/dd/Warrior_Primeval_armor_f.jpg/233px-Warrior_Primeval_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 26:
+              armorName.innerHTML = "Norn"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/e/e6/Warrior_Norn_armor_m.jpg/288px-Warrior_Norn_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/1/15/Warrior_Norn_armor_f.jpg/233px-Warrior_Norn_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 27:
+              armorName.innerHTML = "Monument"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/b7/Warrior_Monument_armor_m.jpg/288px-Warrior_Monument_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/0/06/Warrior_Monument_armor_f.jpg/233px-Warrior_Monument_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 28:
+              armorName.innerHTML = "Asuran"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/92/Warrior_Asuran_armor_m.jpg/288px-Warrior_Asuran_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/9e/Warrior_Asuran_armor_f.jpg/233px-Warrior_Asuran_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 29:
+              armorName.innerHTML = "Silver Eagle"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/ac/Warrior_Silver_Eagle_armor_m.jpg/288px-Warrior_Silver_Eagle_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/7/75/Warrior_Silver_Eagle_armor_f.jpg/233px-Warrior_Silver_Eagle_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 30:
+              armorName.innerHTML = "Deldrimor"
+              currentNameEnd = false;
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/5/53/Warrior_Deldrimor_armor_m.jpg/308px-Warrior_Deldrimor_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/f/f6/Warrior_Deldrimor_armor_f.jpg/308px-Warrior_Deldrimor_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 31:
+              armorName.innerHTML = "Obsidian"
+              currentNameEnd = true;
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/d9/Warrior_Obsidian_armor_m.jpg/283px-Warrior_Obsidian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/9/90/Warrior_Obsidian_armor_f.jpg/233px-Warrior_Obsidian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+          }
+          break;
+        case "monk":
+          switch (currentName) {
+            case 0:
+              armorName.innerHTML = "Roughspun"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/2/2a/Monk_Ascalon_armor_m.jpg/242px-Monk_Ascalon_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/b/bc/Monk_Ascalon_armor_f.jpg/242px-Monk_Ascalon_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 1:
+              armorName.innerHTML = "Krytan"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/4/43/Monk_Krytan_armor_m.jpg/265px-Monk_Krytan_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/d/dc/Monk_Krytan_armor_f.jpg/242px-Monk_Krytan_armor_f.jpg")`;
+                  break;
+              }
+              break;
+            case 2:
+              armorName.innerHTML = "Tyrian"
+              switch (currentSex) {
+                case "male":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/a/ad/Monk_Tyrian_armor_m.jpg/242px-Monk_Tyrian_armor_m.jpg")`;
+                  break;
+                case "female":
+                  armor.style.backgroundImage = `url("https://wiki.guildwars.com/images/thumb/f/f9/Monk_Tyrian_armor_f.jpg/242px-Monk_Tyrian_armor_f.jpg")`;
+                  break;
+              }
+              break;
+          }
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>
